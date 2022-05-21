@@ -1,3 +1,3 @@
 ## Lógica de programação Senai
 
-<img src="(https://img2.gratispng.com/20180320/fkq/kisspng-angle-text-symbol-brand-other-python-5ab0c09b32b4d1.7494578715215330832077.jpg)" height ="200" width="200">
+<img src="(https://img2.gratispng.com/20180504/htq/kisspng-python-installation-pip-appcelerator-titanium-flas-5aec65df1f14b3.6643254115254420151273.jpg)" height ="200" width="200">
