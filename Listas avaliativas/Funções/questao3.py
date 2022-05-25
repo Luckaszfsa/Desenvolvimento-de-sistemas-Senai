@@ -1,3 +1,4 @@
+#3) Faça uma função que receba um texto e uma letra e informe quantas vezes  a letra aparece no texto.
 def contarLetra():
     return nome.count(letra)
 
