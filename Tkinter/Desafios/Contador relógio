@@ -14,4 +14,5 @@ class Tela:
         agora = datetime.datetime.now()
         self.relogio["text"] = agora.strftime("%H:%M:%S")
         self.janela.after(1000, self.alteraHora)
+        
 minhaTela = Tela()
