@@ -23,16 +23,16 @@ def main():
     temperature.entry_for_temperature = entry
 
     
-    label = ttk.Label(frame, text='Enter a temperature in the box')
+    label = ttk.Label(frame, text='Digite a temperatura')
     label.grid()
     temperature.label_for_temperature = label
 
     
-    button1 = ttk.Button(frame, text='Compute Fahrenheit from Celsius')
+    button1 = ttk.Button(frame, text='Converta de Fahrenheit para Celsius')
     button1.grid()
     button1['command'] = lambda: fahrenheit_from_celsius(temperature)
 
-    button2 = ttk.Button(frame, text='Compute Celsius from Fahrenheit')
+    button2 = ttk.Button(frame, text='Converta de Celsius para Fahrenheit')
     button2.grid()
     button2['command'] = lambda: celsius_from_fahrenheit(temperature)
 
