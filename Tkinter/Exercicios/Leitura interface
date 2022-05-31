@@ -1,0 +1,26 @@
+from tkinter import *
+from tkinter import filedialog
+
+class Tela:
+    def __init__(self):
+        self.janela = Tk()
+        self.barraMenu = Menu(self.janela)
+        self.janela.config(menu = self.barraMenu)
+        self.barraMenu.add_command(label = "Ler Arquivo",
+                                   command=self.ler)
+        mainloop()
+
+    def ler(self):
+        caminho = filedialog.askopenfile(mode="r",
+                            initialdir = "C:/Users/Senai/Downloads",
+                            title="Selecione um arquivo",
+        filetypes = (("Arquivos de texto","*.txt"), ("Arquivos Python","*.py")))
+
+        if caminho:
+            conteudo = caminho.read()
+            print(conteudo)
+        else:
+            print("por favor, escolha um arquivo")
+
+minhatela = Tela()
+
