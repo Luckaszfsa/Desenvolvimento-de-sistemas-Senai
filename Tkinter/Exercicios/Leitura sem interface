@@ -1,0 +1,11 @@
+def lerArquivo():
+    lista = []
+    arquivo = open('a.txt', 'r', encoding="utf8")
+    for line in arquivo:
+        lista.append(line)
+
+    arquivo.close()
+    for i in lista:
+        print(i)
+
+lerArquivo()

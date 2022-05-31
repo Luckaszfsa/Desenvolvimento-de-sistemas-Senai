@@ -1,0 +1,48 @@
+from tkinter import *
+from tkinter import filedialog
+
+class Tela:
+    def __init__(self):
+        self.janela = Tk()
+
+        self.arquivoAberto = None
+
+        self.lb1 = Label(self.janela, text="Nome")
+        self.entryNome = Entry(self.janela)
+
+        self.lb2 = Label(self.janela, text="Telefone")
+        self.entryTelefone = Entry(self.janela)
+
+        self.cadastra = Button(self.janela,
+                               text = "Cadastrar",
+                               command = self.salvar)
+        self.lb1.grid(column=0)
+        self.entryNome.grid(row=0, column=1, padx=20)
+
+        self.lb2.grid(row=1, column=0)
+        self.entryTelefone.grid(row=1, column=1, padx=20)
+
+        self.cadastra.grid(row=2, column=0, columnspan=2,
+                           pady=20)
+        mainloop()
+
+    def salvar(self):
+        nome = self.entryNome.get()
+        telefone = self.entryTelefone.get()
+
+        if self.arquivoAberto is None:
+            self.arquivoAberto = filedialog.asksaveasfilename(
+                defaultextension = ".txt",
+                filetypes = (("Arquivos de texto", "*.txt"),
+                             ("Todos os arquivos","*.*")))
+        elif self.arquivoAberto is not None:
+            dados = open(self.arquivoAberto, "a")
+
+            dados.write("Nome:{}\tTelefone:{}\n".format(nome, telefone))
+
+            dados.close()
+        else:
+            print("erro")
+        
+minhatela = Tela()
+
