@@ -1,0 +1,10 @@
+def escreverArquivo():
+    arquivo = open('a.txt', 'r', encoding="utf8")
+    conteudo = arquivo.readlines()
+    conteudo.append("\nNova linha")
+    arquivo = open('a.txt', 'w', encoding="utf8")
+    arquivo.writelines(conteudo)
+    arquivo.close()
+
+escreverArquivo()
+    
