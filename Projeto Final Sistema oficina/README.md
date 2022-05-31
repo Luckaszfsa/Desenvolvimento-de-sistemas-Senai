@@ -1,6 +1,6 @@
 # PROJETO FINAL LÓGICA DE PROGRAMAÇÃO
 
-## Equipe composta por:
+### Equipe composta por:
 
 - Lucas Mendes
 - Bruno Marques
