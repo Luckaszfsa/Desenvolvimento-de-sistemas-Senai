@@ -36,7 +36,19 @@ class Tela_de_Login:
 
         self.entrarBotao = Button(command=self.verificaLogin, bg="#00BFFF", text='ENTRAR')
         self.entrarBotao.pack(padx=5, pady=5)
+
+        self.entrarBotao.bind("<Enter>", self.hoverIn)
+        self.entrarBotao.bind('<Leave>', self.hoverOut)
+
         mainloop()
+
+    def hoverIn(self, event):
+           event.widget.config(bg="#1E90FF")
+
+    def hoverOut(self, event):
+            event.widget.config(bg="#00BFFF")
+        
+        
 
     def verificaLogin(self):
         return
