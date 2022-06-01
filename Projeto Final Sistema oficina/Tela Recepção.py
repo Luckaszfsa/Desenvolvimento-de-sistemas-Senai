@@ -45,23 +45,6 @@ class Recepcao:
     def verOrcamento(self):
         return
     
-    def changeOnHover(botaoCadastrar, colorOnHover, colorOnLeave): 
-       
-        self.botaoCadastrar.bind("<Enter>", func=lambda e: button.config( 
-            background=colorOnHover)) 
-      
-        
-        self.botaoCadastrar.bind("<Leave>", func=lambda e: button.config( 
-            background=colorOnLeave)) 
-      
-      
-        root = Tk() 
-          
-        self.myButton = Button(self.janela, 
-                          text="On Hover - Background Change", 
-                          bg="yellow") 
-        self.botaoCadastrar.pack() 
-        changeOnHover(botaoCadastrar, "red", "yellow") 
 
     def sair(self):
         return
