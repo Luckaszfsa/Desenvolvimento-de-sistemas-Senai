@@ -10,6 +10,10 @@ class Recepcao:
         self.textStyles = ('Roboto', 12)
         self.janela.configure(bg='#363636')
 
+        self.hoverColor1 = '#008000'
+        self.hoverColor2 = '#1E90FF'
+        self.hoverColor3 = '#FF0000'
+
         self.section = Frame(self.janela,bg='#363636')
         self.section.pack(padx=100)
 
@@ -18,27 +22,27 @@ class Recepcao:
 
         self.botaoCadastrar = Button(self.section, command=self.cadastrarCliente,
                                      font=self.textStyles,
-                                     text='Cadastrar\nCliente',bg='#1E90FF',fg='white',
+                                     text='Cadastrar\nCliente',bg='#4682B4',fg='white',
                                      width=15)
-        self.botaoCadastrar.bind("<Enter>", self.passou)
-        self.botaoCadastrar.bind("<Leave>", self.saiu)
+        self.botaoCadastrar.bind("<Enter>", self.hoverIn1)
+        self.botaoCadastrar.bind("<Leave>", self.hoverOut)
         self.botaoCadastrar.pack(pady=4)
 
         self.botaoOrcamento = Button(self.section, command=self.verOrcamento,
                                      font=self.textStyles, bg='#4682B4', fg='white',
                                      text='Ver\nOrçamento',
                                      width=15)
-        self.botaoOrcamento.bind("<Enter>", self.passou)
-        self.botaoOrcamento.bind("<Leave>", self.saiu)
+        self.botaoOrcamento.bind("<Enter>", self.hoverIn2)
+        self.botaoOrcamento.bind("<Leave>", self.hoverOut)
         self.botaoOrcamento.pack(pady=4)
 
         self.frameVazio1 = Frame(self.section)
         self.frameVazio1.pack(pady=20)
 
-        self.botaoSair = Button(self.section,bg='#800000',fg='white', command=self.saiu,
+        self.botaoSair = Button(self.section,bg='#FF0000',fg='white', command=self.saiu,
                                 font=self.textStyles,text='Sair',width=10)
-        self.botaoSair.bind("<Enter>", self.passou)
-        self.botaoSair.bind("<Leave>", self.saiu)
+        self.botaoSair.bind("<Enter>", self.hoverIn3)
+        self.botaoSair.bind("<Leave>", self.hoverOut2)
         self.botaoSair.pack(pady=4)
 
         self.frameVazio2 = Frame(self.section)
@@ -50,11 +54,19 @@ class Recepcao:
     def cadastrarCliente(self):
         return
 
-    def passou(self, event):
-        event.widget.config(relief = RIDGE)
+    def hoverIn1(self, event):
+        event.widget.configure(bg=self.hoverColor1, fg="white",relief=GROOVE)
+    def hoverIn2(self, event):
+        event.widget.configure(bg=self.hoverColor2, fg="white",relief=GROOVE)
+    def hoverIn3(self, event):
+        event.widget.configure(bg=self.hoverColor3, fg="white",relief=GROOVE)
+    def hoverOut(self, event):
+        event.widget.configure(bg='#4682B4',relief=RAISED)
+    def hoverOut2(self, event):
+        event.widget.configure(relief=RAISED)
 
-    def saiu(self, event):
-        event.widget.config(relief = RAISED)
+    def saiu(self):
+        return
 
     def verOrcamento(self):
         return
