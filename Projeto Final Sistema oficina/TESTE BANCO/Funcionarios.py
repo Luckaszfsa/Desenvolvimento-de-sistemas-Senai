@@ -17,9 +17,8 @@ class Funcionarios(object):
         try:
             c = b.conexao.cursor()
 
-            c.execute("insert into clientes(nome, cpf, email, telefone, endereco, carro, placa)values('"+self.nome+
-                      "','"+self.cpf+"','"+self.email+"','"+self.telefone+'", '"+
-                      self.endereco+"', '"+self.carro+"', '"+self.placa+"')")
+            c.execute("insert into clientes(nome, cpf, cargo, senha)values('"+self.nome+
+                      "','"+self.cpf+"','"+self.cargo+"','"+self.senha+'")")
 
             b.conexao.commit()
             c.close()
@@ -36,20 +35,17 @@ class Funcionarios(object):
         try:
             c = b.conexao.cursor()
 
-            c.execute("update clientes set nome = '" +
+            c.execute("update funcionarios set nome = '" +
                       self.nome + "',cpf = '" +
-                      self.cpf + "', email = '" +
-                      self.email + "',telefone = '" +
-                      self.telefone + "', endereco = '" +
-                      self.endereco + "', carro = '" +
-                      self.carro + "', placa = '" +
-                      self.placa + "' where idcliente = " +
-                      self.idcliente+ " ")
+                      self.cpf + "', cargo = '" +
+                      self.cargo + "',senha = '" +
+                      self.senha + "' where idfuncionario = " +
+                      self.idfuncionario+ " ")
 
             b.conexao.commit()
             c.close()
 
-            return "Cliente atualizado com sucesso!"
+            return "Funcionário atualizado com sucesso!"
 
         except:
 
@@ -61,35 +57,33 @@ class Funcionarios(object):
         try:
             c = b.conexao.cursor()
 
-            c.execute("delete from usuarios where idcliente = " + self.idcliente +" ")
+            c.execute("delete from funcionarios where idfuncionario = " + self.idfuncionario +" ")
 
             b.conexao.commit()
             c.close()
 
-            return "Cliente excluido com sucesso"
+            return "Funcionário excluido com sucesso"
 
         except:
 
             return "Ocorreu um erro na exclusão"
 
-    def selectUser(self, idusuario):
+    def selectUser(self, idfuncionario):
         
         b = Banco()
         try:
             c = b.conexao.cursor()
 
-            c.execute("select * from clientes where idcliente = "+
+            c.execute("select * from funcionarios where idfuncionario = "+
                       idfuncionario+ " ")
 
             for linha in c:
-                self.idcliente = linha[0]
+                self.idfuncionario = linha[0]
                 self.nome = linha[1]
                 self.cpf = linha[2]
-                self.email = linha[3]
-                self.telefone = linha[4]
-                self.endereco = linha[5]
-                self.carro = linha[6]
-                self.placa = linha[7]
+                self.cargo = linha[3]
+                self.senha = linha[4]
+                
 
             c.close()
 
