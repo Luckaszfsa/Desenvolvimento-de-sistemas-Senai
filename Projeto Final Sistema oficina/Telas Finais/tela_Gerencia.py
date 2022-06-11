@@ -4,11 +4,19 @@ from tkinter import *
 class Gerente:
     def __init__(self):
         self.janela = Tk()
+#<<<<<<< HEAD
         self.janela.title('Menu Gerente')
         self.titleStyles = ('Arial', 14)
         self.textStyles = ('Roboto', 14)
         self.imgStyles = ('Roboto', 15)
         self.janela.state("zoomed")
+#=======
+        self.titleStyles = ('Arial', 14)
+        self.textStyles = ('Roboto', 14)
+        self.imgStyles = ('Roboto', 15)
+        self.janela.minsize(1200, 600)
+        self.janela.maxsize(1200, 600)
+#>>>>>>> a61989a68e483bf4048d714092312fcfae0a4022
         
         self.img = PhotoImage(master=self.janela, file="gerente.png")
         self.img1 = self.img.subsample(1, 1)
@@ -42,7 +50,10 @@ class Gerente:
 
     def gerenciarFuncionarios(self):
         from cadastrarFuncionario import ver_cadastrar_func
+#<<<<<<< HEAD
         ver_cadastrar_func()
+#=======
+#>>>>>>> a61989a68e483bf4048d714092312fcfae0a4022
         return
 
     def verOrdem(self):

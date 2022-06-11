@@ -1,4 +1,8 @@
+#<<<<<<< HEAD
 from meubanco import Banco  # ---- database
+#=======
+from bancoGerente import Banco  # ---- database
+#>>>>>>> a61989a68e483bf4048d714092312fcfae0a4022
 from tkinter import messagebox
 import tkinter as tk
 
