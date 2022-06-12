@@ -31,7 +31,7 @@ class ver_cadastrar_func():
 
         self.container1.pack(fill='both', expand='no', padx=30, pady=10)
         self.wrapper1.pack(fill='both', expand='yes',
-                           padx=100, pady=10, ipady=30, side="left")
+                           padx=25, pady=10, ipady=30, side="left")
         self.wrapper2.pack(fill='none', expand='no',
                            padx=10, pady=10)
         self.wrapper3.pack(fill='x', expand='no', ipadx=30,
@@ -82,14 +82,17 @@ class ver_cadastrar_func():
                              command=self.inserir_func, bg="#566981", fg="#e1e3db", relief=RAISED)
         self.addBtn.bind("<Enter>", self.hoverIn1)
         self.addBtn.bind("<Leave>", self.hoverOut)
+
         self.alterarBtn = Button(
             self.wrapper1, text='Alterar', font=("Roboto", 16), command=self.alterar_func, bg="#566981", fg="#e1e3db", relief=RAISED)
-        self.alterarBtn .bind("<Enter>", self.hoverIn4)
-        self.alterarBtn .bind("<Leave>", self.hoverOut)
+        self.alterarBtn.bind("<Enter>", self.hoverIn1)
+        self.alterarBtn.bind("<Leave>", self.hoverOut)
+
         self.excluirBtn = Button(
             self.wrapper1, text='Excluir', font=("Roboto", 16), command=self.excluir_func, bg="#566981", fg="#e1e3db", relief=RAISED)
         self.excluirBtn.bind("<Enter>", self.hoverIn3)
         self.excluirBtn.bind("<Leave>", self.hoverOut)
+
         self.addBtn.grid(row=4, column=1, padx=5, pady=10, ipadx=25)
         self.alterarBtn.grid(row=4, column=2, padx=5, pady=3, ipadx=20)
         self.excluirBtn.grid(row=4, column=3, padx=5, pady=3, ipadx=25)
@@ -101,8 +104,9 @@ class ver_cadastrar_func():
         style.theme_use("clam")
         style.configure("mystyle.Treeview", font=("Roboto", 14))
         style.configure("mystyle.Treeview.Heading", font=("Roboto", 16))
-        style.configure("Treeview", background="silver", rowheight=25, fieldbackground="#E0FFFF",)
-        style.configure("Heading", background="#4682B4", foreground = "white")
+        style.configure("Treeview", background="silver",
+                        rowheight=25, fieldbackground="#E0FFFF",)
+        style.configure("Heading", background="#4682B4", foreground="white")
 
         self.cabecalho = ('#', 'nome', 'cpf', 'cargo',
                           'login', 'senha')
