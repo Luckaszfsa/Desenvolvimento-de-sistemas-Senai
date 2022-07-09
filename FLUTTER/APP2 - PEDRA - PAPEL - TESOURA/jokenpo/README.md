@@ -1,4 +1,4 @@
-# jokenpo
+# PEDRA, PAPEL E TESOURA
 
 A new Flutter project.
 
