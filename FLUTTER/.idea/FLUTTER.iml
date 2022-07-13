@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/APP2 - PEDRA - PAPEL - TESOURA/jokenpo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/APP2 - PEDRA - PAPEL - TESOURA/jokenpo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APP2 - PEDRA - PAPEL - TESOURA/jokenpo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/frases_do_dia2/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/frases_do_dia2/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/frases_do_dia2/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/.dart_tool" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
