@@ -12,6 +12,12 @@
       <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/build" />
       <excludeFolder url="file://$MODULE_DIR$/APP1 - FRASES DO DIA/frases_do_dia/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/APP3 - ALCOOL OU GASOLINA/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APP3 - ALCOOL OU GASOLINA/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/APP3 - ALCOOL OU GASOLINA/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APP4 - ATM CONSULTORIA/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APP4 - ATM CONSULTORIA/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APP4 - ATM CONSULTORIA/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
