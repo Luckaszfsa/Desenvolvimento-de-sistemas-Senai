@@ -14,7 +14,7 @@ public class Controle {
     }
 
     public void setCanal(int canal) {
-        if (this.canal >=0 && this.canal<= 100){
+        if (canal >=0 && canal<= 100){
         this.canal = canal;
     }
     }
@@ -46,6 +46,9 @@ public class Controle {
         System.out.println(controle.volume);
         controle.aumentarVolume();
         controle.setCanal(50);
+        for(int i = 0; i<10; i++){
+            controle.aumentarVolume();
+        }
         System.out.println(controle.canal);
         System.out.println(controle.volume);
     }
