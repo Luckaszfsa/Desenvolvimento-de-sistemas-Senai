@@ -43,8 +43,7 @@ public class contaInvestimento {
     }
     
     public static void main(String[] args) {
-        contaInvestimento minhaConta;
-        minhaConta = new contaInvestimento(1678, "Pedro", 1000,10);
+        contaInvestimento minhaConta = new contaInvestimento(1678, "Pedro", 1000,10);
         System.out.println(minhaConta.saldo);
         minhaConta.calcularJuros();
         minhaConta.calcularJuros();
