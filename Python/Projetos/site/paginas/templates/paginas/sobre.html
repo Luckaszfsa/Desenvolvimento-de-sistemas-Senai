@@ -1,3 +1,10 @@
 {%extends 'base.html'%}
+{% load static %}
 
-{%block content%}SOBRE{%endblock content%}
+
+{%block content%}
+<p>SOBRE</p>
+<p>
+    <img src="{% static 'img/a.jpg' %}" style="width: 640px; height:auto" alt="Imagem teste" srcset="">
+</p>
+{%endblock content%}
