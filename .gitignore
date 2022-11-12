@@ -1,0 +1,11 @@
+node_modules
+
+*.json
+
+applications.html
+bitnami.css
+favicon.ico
+/webalizer
+/xampp
+/img
+/dashboard

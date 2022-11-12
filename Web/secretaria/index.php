@@ -1,12 +1,11 @@
-<?php include "header.php" ?>
+<?php include "header.php"; ?>
 
-<!-- Page Wrapper -->
-<div id="wrapper">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <?php include 'menu.php' ?>
+        <!-- Sidebar -->
+        <?php include "menu.php"; ?>
+        <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -15,36 +14,36 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include 'topbar.php' ?>
+                <?php include "topbar.php"; ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Content Row -->
-                    <?php include 'cards.php'; ?>
+                    <?php include "cards.php"; ?>
 
                     <!-- Content Row -->
 
-                    <!-- Rotas -->
                     <?php
-
-                    if (!isset($_GET['r'])) {
-                        include 'template/index.php';
-                    } else {
-                        switch ($_GET['r']) {
-                            case 'inicio':
-                                include 'template/index.php';
+                        if(!isset($_GET['r'])){
+                            include "template/index.php";
+                        }else{                        
+                            switch ($_GET['r']){
+                                case 'inicio':
+                                include "template/index.php";
                                 break;
 
-                            case 'cadAluno':
-                                include "template/cadAluno.php";
-                                break;
-                            default:
-                                include 'template/index.php';
+                                case 'cadAluno':
+                                    include "template/cadAluno.php";
+                                    break;
+
+                                default:
+                                include "template/index.php";
+                            }   
                         }
-                    }
                     ?>
+
 
 
                 </div>
@@ -54,15 +53,15 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include 'footer.php' ?>
+            <?php include "footer.php"; ?>
             <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
 
-</div>
-<!-- End of Page Wrapper -->
-<?php include 'acessorio.php' ?>
+    </div>
+    <!-- End of Page Wrapper -->
 
-<!-- Bootstrap core JavaScript-->
-<?php include 'js.php' ?>
+    <?php include "acessorio.php"; ?>
+
+   <?php include "js.php"; ?>
