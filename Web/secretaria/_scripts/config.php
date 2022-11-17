@@ -1,8 +1,8 @@
-<?php 
-$servidor ='localhost';
+<?php
+$servidor = 'localhost';
 $usuario = 'root';
 $senha = '';
 $banco = 'escola';
 
 //String da conexão
-$mysqli = new mysqli($servidor,$usuario,$senha,$banco);
+$mysqli = new mysqli($servidor, $usuario, $senha, $banco, 3307);
