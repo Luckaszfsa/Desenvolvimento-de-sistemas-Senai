@@ -1,20 +1,19 @@
 <?php
-function totalCard($tipo)
-{
+function totalCard($tipo){
     include "config.php";
-    $sql = "SELECT * FROM cadaluno";
+    $sql = "SELECT * FROM $tipo";
     $query = $mysqli->query($sql);
     $total = $query->num_rows;
 
     return $total;
 }
 
-function validarAluno($cpf)
-{
+function validarUsuario($cpf,$tabela){
     include "config.php";
-    $sql = "SELECT id FROM cadaluno WHERE cpf = '$cpf'";
+    $sql = "SELECT id FROM $tabela WHERE cpf = '$cpf'";
     $query = $mysqli->query($sql);
     $total = $query->num_rows;
 
     return $total;
+
 }
