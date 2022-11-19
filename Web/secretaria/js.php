@@ -12,6 +12,7 @@
 
 <!-- Page level custom scripts -->
 
+<script src="js/cpf.js"></script>
 <script src="js/cep.js"></script>
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>

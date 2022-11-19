@@ -21,7 +21,8 @@
                     </div>
                     <div class="col-md-4">
                         <label for="inputEmail4" class="form-label">CPF</label>
-                        <input type="text" name="cpf" class="form-control" id="inputEmail4">
+                        <input type="text" onblur="return verificarCPF(this.value)" name="cpf" class="form-control"
+                            id="cpf">
                     </div>
                     <div class="col-md-4">
                         <label for="inputPassword4" class="form-label">CEP</label>
@@ -85,19 +86,44 @@ if (!empty($_POST['nome'])) {
     $estado = $_POST['estado'];
     $obs = $_POST['obs'];
 
-    $sql = "INSERT INTO cadaluno (nome, estado_civil, cpf,rua,cidade,bairro, estado, obs) VALUES ('$nome', '$sexo', '$cpf','$rua','$cidade','$bairro','$estado','$obs')";
+    if (validarAluno($cpf) >= 1) { ?>
+<script type="text/javascript">
+Swal.fire(
+    'Ops!',
+    'Esse CPF já está cadastrado.',
+    'question'
+)
+</script>
+<?php } else {
 
-    $query = $mysqli->query($sql);
 
-    if ($query) {
-        echo "<script>alert('Salvo')</script>";
-    } else {
-        echo "<script>alert('Erro')</script>";
+
+        $sql = "INSERT INTO cadaluno (nome, sexo, cpf,rua,cidade,bairro, estado, obs) VALUES ('$nome', '$sexo',
+'$cpf','$rua','$cidade','$bairro','$estado','$obs')";
+
+        $query = $mysqli->query($sql);
+
+        if ($query) { ?>
+<script type="text/javascript">
+Swal.fire({
+    title: 'Salvo',
+    text: 'Aluno cadastrado com Sucesso',
+    icon: 'sucess',
+    confirmButtonText: 'Ok'
+
+}).then((result) => {
+    if (result.isConfirmed) {
+        location.href = 'http://localhost/SENAI/Web/SECRETARIA/index.php?r=inicio';
+    }
+})
+</script>
+<?php } else { ?>
+<script type="text/javascript">
+Swal.fire("Erro", "You clicked the button!", "error");
+</script>
+<?php }
     }
 }
-
-
-
 
 
 ?>
