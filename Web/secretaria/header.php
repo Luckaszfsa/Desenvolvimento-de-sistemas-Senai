@@ -1,4 +1,11 @@
-<?php include "_scripts/functions.php"; ?>
+<?php
+session_start();
+if (empty($_SESSION['email'])) {
+    echo "<script> alert('Por favor, realize seu login')
+        window.location.href='login.php'";
+}
+
+include "_scripts/functions.php"; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
