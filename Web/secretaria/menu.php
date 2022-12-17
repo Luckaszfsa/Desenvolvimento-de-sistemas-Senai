@@ -34,6 +34,24 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Selecione:</h6>
                 <a class="collapse-item" href="index.php?r=cadAluno">Aluno</a>
+                <a class="collapse-item" href="index.php?r=cadDisciplina">Disciplina</a>
+                <a class="collapse-item" href="index.php?r=cadProfessor">Professor</a>
+            </div>
+        </div>
+    </li>
+
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTree" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Alterar</span>
+        </a>
+        <div id="collapseTree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Selecione:</h6>
+                <a class="collapse-item" href="index.php?r=altAluno">Aluno</a>
+                <a class="collapse-item" href="index.php?r=cadDisciplina">Disciplina</a>
                 <a class="collapse-item" href="index.php?r=cadProfessor">Professor</a>
             </div>
         </div>

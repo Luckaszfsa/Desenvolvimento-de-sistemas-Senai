@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <body>
@@ -46,6 +49,7 @@
     })
     </script>
     <?php } else {
+            $_SESSION['email'] = $email;
             echo "<script>window.location.href='../index.php';</script>";
         }
     }

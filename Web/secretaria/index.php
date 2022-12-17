@@ -42,6 +42,18 @@
                             include "template/cadProf.php";
                             break;
 
+                        case 'cadDisciplina':
+                            include "template/cadDisciplina.php";
+                            break;
+
+                        case 'altAluno':
+                            include "template/telaAltAluno.php";
+                            break;
+
+                        case 'alterarAluno':
+                            include "template/altAluno.php";
+                            break;
+
                         default:
                             include "template/index.php";
                     }
