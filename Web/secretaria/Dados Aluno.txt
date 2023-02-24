@@ -1,0 +1,14 @@
+Estado Civil
+Aluno
+Nascimento
+RG
+CPF
+Obs
+
+---Turma
+Turma
+Curso
+Ano
+Turno
+DT MAtricula
+DT Validade

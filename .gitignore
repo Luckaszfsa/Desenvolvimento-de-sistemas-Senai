@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 /JAVA/POO5/build/
+=======
+node_modules
+
+*.json
+
+applications.html
+bitnami.css
+favicon.ico
+/webalizer
+/xampp
+/img
+/dashboard
+>>>>>>> 51cbaca616e9d5efb727fe3abf722a6888692414
